@@ -10,7 +10,12 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/:id',
+      path: '/alquran/',
+      name: 'root',
+      component: HomeView
+    },
+    {
+      path: '/alquran/:id',
       name: 'sura',
       component: HomeView
     },
