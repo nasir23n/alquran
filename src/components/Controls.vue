@@ -28,10 +28,13 @@ function playNew() {
             let timeout = setTimeout(() => {
                 player.value.play();
                 clearTimeout(timeout);
-            }, 100);
+            }, 500);
         }
     });
     player.value.addEventListener('ended', (event) => {
+        if (store.state.sajda) {
+            return;
+        }
         if (store.state.playing < store.state.limit.end) {
             store.commit('play', store.state.playing+1)
         } else {

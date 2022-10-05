@@ -15,6 +15,7 @@ const store = createStore({
             isPlaying: false,
             asideOpen: false,
             loading: false,
+            sajda: false,
             limit: {
                 start: 0,
                 end: 0
@@ -22,6 +23,9 @@ const store = createStore({
         }
     },
     mutations: {
+        setsajda(state, bool) {
+            state.sajda = bool;
+        },
         setLimit(state, val) {
             state.limit = val;
         },

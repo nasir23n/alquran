@@ -18,15 +18,19 @@ let current = computed(() => {
     return props.playing == props.ayah_ar.number;
 });
 
-
+store.commit('setsajda', props.ayah_ar.sajda);
 
 </script>
 
 <template>
     <div class="bg-slate-100 dark:bg-slate-800 dark:border-slate-600 py-2 px-4 rounded-md border-2" :class="{
                 'border-slate-300': !playing,
-                'border-green-600 dark:border-green-600': current
+                'border-green-600 dark:border-green-600': current,
+                '!bg-sky-900 !border-blue-500': ayah_ar.sajda
             }">
+        <p v-if="ayah_ar.sajda">
+            <strong class="py-1 rounded-full px-2 bg-green-500 text-white">SAJDA</strong>
+        </p>
         <p class="text-xl md:text-3xl text-right leading-[40px] md:leading-[60px] font-nh">{{ ayah_ar.text }}</p>
         <p class="text-xl md:text-3xl text-right leading-[40px] md:leading-[60px] bangla_font">{{ ayah_bn.text }}</p>
         <button @click="$emit('startPlay', ayah_ar.number)" class="py-1 flex items-center gap-2 rounded-full px-2 bg-green-200 text-green-800">
