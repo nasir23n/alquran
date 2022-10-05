@@ -1,0 +1,9 @@
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" type="image/svg+xml" href="https://nasir23n.github.io/alquran/quran.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Al Quran</title>
+    <script type="module" crossorigin src="https://nasir23n.github.io/alquran/assets/index.50023015.js"></script>
+    <link rel="stylesheet" href="https://nasir23n.github.io/alquran/assets/index.c3705e99.css">
+  </head>
