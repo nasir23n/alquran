@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps, ref, computed, onMounted } from 'vue'
+import { defineProps, ref, computed, onMounted, watch } from 'vue'
 import { useStore } from 'vuex';
 
 const props = defineProps({
@@ -18,7 +18,9 @@ let current = computed(() => {
     return props.playing == props.ayah_ar.number;
 });
 
-store.commit('setsajda', props.ayah_ar.sajda);
+
+// store.commit('setsajda', props.ayah_ar.sajda);
+// sajda
 
 </script>
 
@@ -26,7 +28,7 @@ store.commit('setsajda', props.ayah_ar.sajda);
     <div class="bg-slate-100 dark:bg-slate-800 dark:border-slate-600 py-2 px-4 rounded-md border-2" :class="{
                 'border-slate-300': !playing,
                 'border-green-600 dark:border-green-600': current,
-                '!bg-sky-900 !border-blue-500': ayah_ar.sajda
+                '!bg-sky-900 !border-blue-500 !text-white': ayah_ar.sajda
             }">
         <p v-if="ayah_ar.sajda">
             <strong class="py-1 rounded-full px-2 bg-green-500 text-white">SAJDA</strong>

@@ -1,21 +1,16 @@
 <script setup>
 	import axios from 'axios';
 	import { onBeforeMount, reactive, ref, watch } from 'vue';
-	import { RouterLink, RouterView, useRoute } from 'vue-router'
 	import Controls from './components/Controls.vue';
 	import SuraList from './components/Aside/SuraList.vue';
 	import { useStore } from 'vuex';
-
-	
-	
+import HomeView from './views/HomeView.vue';
 	const suraList = ref([]);
 	const selectedSura = ref(1);
 	const store = useStore();
-	
-	const route = useRoute();
 
 	watch(
-		() => route.params.id,
+		() => store.state.selectedSura,
 		async newId => {
 			selectedSura.value = newId ? Number(newId) : 1;
 			store.commit('asideToggle');
@@ -38,9 +33,8 @@
 				:suras="suraList"
 				:selected="selectedSura"
 			/>
-	
-			<RouterView />
-			
+
+			<HomeView />
 			<!-- right sidebar -->
 	
 			<Controls />

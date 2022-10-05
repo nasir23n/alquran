@@ -1,6 +1,5 @@
 <script setup>
 import { ref, watch } from 'vue';
-import { useRoute } from 'vue-router';
 import { useStore } from 'vuex';
 import { targetSura, usePlayer, useTheme, isMobile, getLeng } from '../Composables/useData.js';
 const { toggleDark } = useTheme();
@@ -32,7 +31,8 @@ function playNew() {
         }
     });
     player.value.addEventListener('ended', (event) => {
-        if (store.state.sajda) {
+        if (store.state.sajda[store.state.playing]) {
+            console.log(store.state.sajda);
             return;
         }
         if (store.state.playing < store.state.limit.end) {
@@ -98,10 +98,8 @@ store.subscribe((mutation, state) => {
     }
 });
 
-const route = useRoute();
-
 watch(
-	() => route.params.id,
+	() => store.state.selectedSura,
 	async newId => {
         startOver();
 	}
@@ -166,5 +164,6 @@ watch(
             </div>
 
         </div> 
+
     </div>
 </template>

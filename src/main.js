@@ -1,7 +1,6 @@
 import { createApp } from 'vue'
 import { createStore } from 'vuex'
 import App from './App.vue'
-import router from './router'
 
 import './assets/main.css'
 import './assets/font.css'
@@ -15,7 +14,8 @@ const store = createStore({
             isPlaying: false,
             asideOpen: false,
             loading: false,
-            sajda: false,
+            sajda: [],
+            selectedSura: 1,
             limit: {
                 start: 0,
                 end: 0
@@ -41,6 +41,9 @@ const store = createStore({
         setPlaying(state, bool) {
             state.isPlaying = bool;
         },
+        renderSura(state, no) {
+            state.selectedSura = no;
+        },
         asideToggle(state) {
             state.asideOpen = !state.asideOpen;
         },
@@ -52,6 +55,4 @@ const store = createStore({
 
 const app = createApp(App)
 app.use(store)
-app.use(router)
-
 app.mount('#app')
