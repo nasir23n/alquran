@@ -1,6 +1,6 @@
 <script setup>
 	import axios from 'axios';
-	import { onBeforeMount, reactive, ref, watch } from 'vue';
+	import { onBeforeMount, onMounted, reactive, ref, watch } from 'vue';
 	import Controls from './components/Controls.vue';
 	import SuraList from './components/Aside/SuraList.vue';
 	import { useStore } from 'vuex';
@@ -17,7 +17,7 @@ import HomeView from './views/HomeView.vue';
 		}
 	);
 	
-	onBeforeMount(() => {
+	onMounted(() => {
 		axios.get('https://api.alquran.cloud/v1/surah')
 			.then(result => {
 				suraList.value = result.data.data;

@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps, ref, computed, onMounted, watch } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import { useStore } from 'vuex';
 
 const props = defineProps({
@@ -35,7 +35,7 @@ let current = computed(() => {
         </p>
         <p class="text-xl md:text-3xl text-right leading-[40px] md:leading-[60px] font-nh">{{ ayah_ar.text }}</p>
         <p class="text-xl md:text-3xl text-right leading-[40px] md:leading-[60px] bangla_font">{{ ayah_bn.text }}</p>
-        <button @click="$emit('startPlay', ayah_ar.number)" class="py-1 flex items-center gap-2 rounded-full px-2 bg-green-200 text-green-800">
+        <button type="button" @click="$emit('startPlay', ayah_ar.number)" class="py-1 flex items-center gap-2 rounded-full px-2 bg-green-200 text-green-800">
             <template v-if="current && store.state.loading">
                 <svg class="animate-spin h-5 w-5 text-green-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>

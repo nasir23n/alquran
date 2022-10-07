@@ -5,12 +5,25 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" type="image/svg+xml" href="https://nasir23n.github.io/alquran/quran.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Al Quran" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:url" content="https://nasir23n.github.io/alquran/" />
+    <meta property="og:image" content="https://nasir23n.github.io/alquran/banner.png" />
+    <meta name="description" content="Al quran online Arabic, Bangla and audio version.">
+
+    <link rel="apple-touch-icon" href="https://nasir23n.github.io/alquran/quran.png">
     <title>Al Quran</title>
-    <script type="module" crossorigin src="https://nasir23n.github.io/alquran/assets/index.02682b4f.js"></script>
-    <link rel="stylesheet" href="https://nasir23n.github.io/alquran/assets/index.1b5555e6.css">
+    <link rel="manifest" href="https://nasir23n.github.io/alquran/manifest.json">
+    <script type="module" crossorigin src="https://nasir23n.github.io/alquran/assets/index.485b3924.js"></script>
+    <link rel="stylesheet" href="https://nasir23n.github.io/alquran/assets/index.0e3a88b8.css">
   </head>
   <body class="h-full dark:bg-slate-900 dark:text-slate-50">
     <div id="app" class="h-full"></div>
     
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js');
+      }
+    </script>
   </body>
 </html>

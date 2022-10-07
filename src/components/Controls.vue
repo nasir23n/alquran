@@ -116,6 +116,9 @@ watch(
         <!-- <h2 class="text-xl py-3 font-bold text-center mb-4 sticky top-0 bg-white dark:bg-slate-900">Controls</h2> -->
         <div class="w-full xl:divide-y dark:divide-slate-700 xl:pt-4 flex justify-between items-center xl:block">
             <button
+                type="button"
+                aria-label="Aside toggle"
+                title="Aside toggle"
                 class="py-2 px-2 bg-slate-200 dark:bg-slate-700 ml-2 rounded-full block md:hidden"
                 @click="store.commit('asideToggle')"
             >
@@ -124,6 +127,9 @@ watch(
             <div class="xl:mt-4 p-3">
                 <div class="flex justify-center gap-3">
                     <button
+                        type="button"
+                        aria-label="Previous ayah"
+                        name="Previous ayah"
                         class="py-2 px-3 bg-slate-300 dark:bg-slate-700 rounded-full active:scale-95 disabled:dark:bg-red-500/20 disabled:bg-red-500/20"
                         @click="playPrev"
                         :disabled="store.state.playing == store.state.limit.start"
@@ -131,6 +137,9 @@ watch(
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                     </button>
                     <button 
+                        aria-label="Play/pause"
+                        name="Play/pause"
+                        type="button"
                         class="py-2 px-3 bg-slate-300 dark:bg-slate-700 rounded-full active:scale-95"
                         @click="store.commit('play', store.state.playing || store.state.limit.start)"
                     >
@@ -145,7 +154,10 @@ watch(
                             </svg>
                     </button>
                     <button
-                    class="py-2 px-3 bg-slate-300 dark:bg-slate-700 rounded-full active:scale-95 disabled:dark:bg-red-500/20 disabled:bg-red-500/20"
+                        type="button"
+                        aria-label="Next Ayah"
+                        name="Next Ayah"
+                        class="py-2 px-3 bg-slate-300 dark:bg-slate-700 rounded-full active:scale-95 disabled:dark:bg-red-500/20 disabled:bg-red-500/20"
                         @click="playNext"
                         :disabled="store.state.playing == store.state.limit.end"
                     >
@@ -155,7 +167,13 @@ watch(
             </div>
 
             <div class="xl:mt-10 flex justify-center items-center xl:pt-5 pr-3 xl:pr-0">
-                <button @click="toggleDark" class="flex gap-2 py-2 dark:bg-slate-700 px-3 bg-slate-300 hover:bg-slate-400 active:scale-95 rounded-md">
+                <button 
+                    type="button"
+                    aria-label="Toggle Dark"
+                    name="Toggle Dark"
+                    @click="toggleDark" 
+                    class="flex gap-2 py-2 dark:bg-slate-700 px-3 bg-slate-300 hover:bg-slate-400 active:scale-95 rounded-md"
+                >
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                     <span class="md:block hidden">
                         Toggle dark

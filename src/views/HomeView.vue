@@ -79,7 +79,7 @@
 			</div>
 	
 			<!-- ayahs -->
-			<div class="grid gap-3 p-4" v-if="suraForRander.length">
+			<div class="grid gap-3 p-4 pb-28 xl:pb-0" v-if="suraForRander.length">
 
 				<template v-for="(item, index) in suraForRander[0].ayahs" :key="item.number">
 					<Ayahs
