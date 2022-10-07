@@ -1,23 +1,31 @@
 
-@import url(https://fonts.googleapis.com/earlyaccess/amiri.css);
+/* @import url(https://fonts.googleapis.com/earlyaccess/amiri.css);
 @import url(https://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
 @import url(https://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
-@import url(https://fonts.googleapis.com/earlyaccess/thabit.css);
+@import url(https://fonts.googleapis.com/earlyaccess/thabit.css); 
 @import url('https://fonts.maateen.me/adorsho-lipi/font.css');
+*/
 
-@font-face {
+
+/* @font-face {
   font-family: 'MeQuran';
   src: url('https://cdn.alquran.cloud/public/fonts/me_quran-webfont.otf');
-}
+} */
 
-.font-mequran {
+/* .font-mequran {
     font-family: 'MeQuran';
-}
+} */
 
+@font-face {
+    font-family: 'AdorshoLipi';
+    src: url('https://fonts.maateen.me/adorsho-lipi/AdorshoLipi.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
 .bangla_font {
     font-family: 'AdorshoLipi', sans-serif;
 }
-
+/* 
 @font-face {
   font-family: 'MeQuran2';
   src: url('https://cdn.alquran.cloud/public/fonts/me_quran_2.ttf');
@@ -25,7 +33,7 @@
 
 .font-mequran2 {
     font-family: 'MeQuran2';
-}
+} */
 
 @font-face {
   font-family: 'NooreHidayah';
@@ -35,7 +43,7 @@
 .font-nh {
     font-family: 'NooreHidayah';
 }
-
+/* 
 @font-face {
   font-family: 'Othmani';
   src: url('https://cdn.alquran.cloud/public/fonts/ar-Othmani.ttf');
@@ -113,4 +121,4 @@
 
 .font-thabit {
     font-family: 'Thabit', serif;
-}
+} */
