@@ -30,7 +30,7 @@
     "start_url": "/alquran/?source=pwa",
     "id": "/?source=pwa",
     "background_color": "#3367D6",
-    "display": "fullscreen",
+    "display": "standalone",
     "scope": "/alquran/",
     "theme_color": "#3367D6",
     "prefer_related_applications": false,

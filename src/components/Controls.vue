@@ -22,13 +22,13 @@ function playNew() {
         store.commit('setPlaying', true);
         store.commit('setLoading', false);
         player.value.play();
-        if (isMobile()) {
-            player.value.pause();
-            let timeout = setTimeout(() => {
-                player.value.play();
-                clearTimeout(timeout);
-            }, 500);
-        }
+        // if (isMobile()) {
+        //     player.value.pause();
+        //     let timeout = setTimeout(() => {
+        //         player.value.play();
+        //         clearTimeout(timeout);
+        //     }, 500);
+        // }
     });
     player.value.addEventListener('ended', (event) => {
         if (store.state.sajda[store.state.playing]) {
